@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+:root{
+    --navbar-BackgrounColor:rgba(15, 23, 56, 1)
+}
+
+#layout{
+   display: flex;
+   min-height: 100vh;
+}
+.pointer{
+    cursor: pointer;
+}
+
+/* Side NavBar Desigin */
+.side-navBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    /* flex: 1; */
+    /* flex-basis: 18.3rem; */
+    width: 18.3rem;
+    /* width: 100%; */
+    border: green 1px solid;
+    background-color: var(--navbar-BackgrounColor);
+    padding-inline: 1.1rem;
+}
+.nav-bar-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.navBar-heading{
+    display: flex;
+    gap: 3.56rem;
+    padding-top: 1.5rem;
+    color: white;
+    font-size: 1.25rem;
+}
+.navBar-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop-down{
+    width: 9.93rem;
+    height: 2rem;
+    /* border: orange 1px solid; */
+    display: flex;
+    overflow-y: hidden;
+}
+.expand-more{
+    align-self: center;
+}
+.drop-down-option{
+    /* position: absolute; */
+    background-color: b;
+    & li{
+        /* position: absolute; */
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+        margin-bottom: 0.2rem;
+        color: white;
+    }
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding-block: 0.3125rem;
+    & a{
+        flex: 1;
+        height: 2.75rem;
+        padding: 0.625rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+        border-radius: 0.5rem;
+        & span{
+            width: 1.68rem;
+            height: 1.5rem;
+            background-color: rgba(226, 105, 48, 1);
+            border-radius: 0.375rem;
+            /* font-size: 0.6rem; */
+            text-align: center;
+            padding-top: 0.2rem;
+        }
+    }
+}
+
+/* Add css Programatticly if any of them have active links */
+.highlight-navLinks{
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.notification-logout-option{
+    /* height: 13.75rem; */
+    padding: 1.6125rem 0.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    & a{
+        position: relative;
+        flex: 1;
+        width: 100%;
+        height: 2.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+        border-radius: 0.5rem;
+        & span{
+            text-align: center;
+            padding-top: 0.2rem;
+        }
+    }
+
+}
+.login-face-icon{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.three-dots::after{
+  content: url('./Icon/expand_more_3dots.svg');
+  position: absolute;
+  right: 0;
+  
+}
+/* DashBoard Conatiner Desigin*/
+
+.dashboard{
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 26.43rem;
+    padding:2.5rem 2.5rem;
+    background-color: rgba(248, 249, 255, 1);
+}
+
+/* Welcoming Message */
+.welcoming-quote{
+    & h2{
+        font-size: 1.625rem;
+        font-weight: 400;
+        & span{
+            font-weight: 500;
+            & img{
+                padding-left: 1.25rem;
+            }
+        }
+    }
+    & p{
+        color: rgba(106, 106, 109, 1);
+    }
+}
+
+.document-status-container{
+    position: relative;
+    margin-top: 1.18rem;
+    width: 21.437rem;
+    height: 11.375rem;
+    background-image: linear-gradient(to right,rgba(123, 146, 248, 1),rgba(255, 147, 147, 1));
+    border-radius: 1rem;
+    padding: 1.625rem;
+    /* padding-right: 4rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.document-status-container>h2{
+    max-width: 10.125rem;
+    margin-left: auto ;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.12rem;
+    & .documents-span1{
+        font-weight: 500;
+    }
+
+    & .documents-span2{
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+        font-weight: 600;
+    }
+}
+.horizontal-line{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.document-status-container>p{
+    position: relative;
+    & img{
+        position: absolute;
+        right: 0;
+        bottom: 5%;
+    }
+}
+
+.card-checked{
+    position: absolute;
+    top: -1.18rem;
+    left: 0.937rem;
+}
+
+.gradient-rectangle-2{
+    width: 21.437rem;
+    height: 11.375rem;
+    background-image: linear-gradient(to right,rgba(38, 58, 139, 1),rgba(26, 33, 63, 1));
+    border-radius: 1rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-inline: 0.4rem;
+}
+
+.task-container{
+    flex: 1;
+    width: 45.25rem;
+    border: blue 1px solid;
+}
+
+.doughnut-chart-container {
+    position: relative;
+    width: 160px;
+    height: 140px;
+}
+
+.doughnut-chart {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+}
+
+.doughnut-chart-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.doughnut-chart::before {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background-image: linear-gradient(to right,rgba(38, 58, 139, 1),rgba(26, 33, 63, 1));;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* .company-info-container{
+
+} */
+
+@media(max-width:750px){
+    #layout{
+        flex-direction: column;
+     }
+     
+}
