@@ -167,31 +167,34 @@
         </div>
 
         <div class="task-container">
-                <div  >
+                <div  class="task-section">
+                     <!-- Task Header Container -->
                     <div class="task-container-heading ">
                         <h2>Tasks</h2>
                         <a href="" class="pointer">View All</a>
                     </div>
+                      <!-- Task Filter Buttons -->
                     <div class="task-filters">
                         <button class="border-0 transparent pointer selectedButton buttons">My Task</button>
                         <button  class="border-0 transparent pointer buttons">OverDue</button>
                         <button  class="border-0 transparent pointer buttons">Assigined By Me</button>
                     </div>
-                </div>
-                <!-- Table  for deisplaying the Task Related Data-->
+                
+                 <!-- Task Table Container -->
                 <div class="table-container">
-                        <table>
+                      <!-- Table displaying task-related data -->
+                        <table  class="task-table">
                             <thead>
-                                <tr>
+                                <tr id="TaskTableHeading">
                                     <th>Task</th>
                                     <th>Category</th>
                                     <th>Due date</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
-                            <tbody id="task-body">
+                            <tbody  id="task-body">
                                     <tr>
-                                        <td  class="  task-title">Update Tax Document for Alphalinx Lorem, ipsum  </td>
+                                        <td  class="task-title">Update Tax Document for Alphalinx Lorem, ipsum  </td>
                                         <td >Compliance</td>
                                         <td>23/11/23</td>
                                         <td><button class="status-button pointer" >Request sent</button></td>
@@ -217,56 +220,67 @@
                             </tbody>
                         </table>
                 </div>
-                <!-- <div  >
-                    <div class="task-container-heading ">
-                        <h2>Tasks</h2>
+            </div>
+
+            <!-- Payement History Table -->
+            <div class="payment-history-table">          
+                    <div class="task-container-heading">
+                        <h2>Payment history</h2>
                         <a href="" class="pointer">View All</a>
                     </div>
-                    <div class="task-filters">
-                        <button class="border-0 transparent pointer selectedButton">My Task</button>
-                        <button  class="border-0 transparent pointer">OverDue</button>
-                        <button  class="border-0 transparent pointer">Assigined By Me</button>
-                    </div>
-                </div> -->
-                <!-- Table  for deisplaying the Task Related Data-->
-                <!-- <div class="table-container">
+                               
+                <!-- Table  for deisplaying the Payement Related Data-->
+                <div class="table-container">
                         <table>
                             <thead>
-                                <tr>
-                                    <th>Task</th>
-                                    <th>Category</th>
-                                    <th>Due date</th>
-                                    <th>Status</th>
+                                <tr id="PayementTableHeading">
+                                    <th>Transaction ID</th>
+                                    <th>Date of transaction</th>
+                                    <th class="expand-more">Amount</th>
+                                    <th>Description</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="payment-table-body">
                                     <tr>
-                                        <td  class="task-heading">Update Tax Document for Alphalinx Lorem, ipsum  </td>
-                                        <td >Compliance</td>
-                                        <td>23/11/23</td>
-                                        <td><button class="status-button pointer" >Request sent</button></td>
+                                        <td >#764657758  </td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Mailbox</td>
                                     </tr>
                                     <tr>
-                                        <td class="task-heading">Update KYC document </td>
-                                        <td>Compliance</td>
-                                        <td>23/11/23</td>
-                                        <td ><button class="status-button pointer">Request sent</button></td>
+                                        <td >#764657758</td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Registration (upgrade)</td>
                                     </tr>
                                     <tr>
-                                        <td class="task-heading">Add clearer photo for visa application</td>
-                                        <td>Visa center</td>
-                                        <td>23/11/23</td>
-                                        <td><button class="status-button pointer">Pending action</button></td>
+                                        <td >#764657758</td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Mailbox</td>
                                     </tr>
                                     <tr>
-                                        <td class="task-heading">Add clearer photo for visa application</td>
-                                        <td>Visa center</td>
-                                        <td>23/11/23</td>
-                                        <td><button class="status-button pointer">Pending action</button></td>
+                                        <td >#764657758</td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Mailbox</td>
+                                    </tr>
+                                    <tr>
+                                        <td >#764657758</td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Mailbox</td>
+                                    </tr>
+                                    <tr>
+                                        <td >#764657758</td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Mailbox</td>
                                     </tr>
                             </tbody>
                         </table>
-                </div> -->
+                </div> 
+            </div>
         </div>
      </div>
      <script src="./Script.js"></script>

@@ -77,7 +77,7 @@ const getTaskBody=()=>{
     
 }
 
-
+// Functionality to hihlight the selected button
 const buttons=document.querySelectorAll('.task-filters>button');
 console.log(buttons);
 for(let button of buttons){
@@ -89,13 +89,24 @@ for(let button of buttons){
     })
 }
 
-// .selectedButton::after{
-//     content: '';
-//     position: absolute;
-//     bottom:-60%;
-//     right: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 0.2rem;
-//     background-color: blue;
-// }
+
+// Expand More Icon  on Payement History
+
+const expandMoreIconButtons=document.getElementsByClassName('expand-more');
+
+
+for(let expandMoreIconButton of expandMoreIconButtons){
+
+    expandMoreIconButton.addEventListener('click',()=>{
+        console.log(expandMoreIconButton.nextElementSibling);
+        const displayProperty= expandMoreIconButton.nextElementSibling.style.display
+       if(displayProperty==='none') 
+       {
+           expandMoreIconButton.nextElementSibling.style.display='flex'
+       }
+       else{
+           expandMoreIconButton.nextElementSibling.style.display='none'
+       }
+    })
+}
+
