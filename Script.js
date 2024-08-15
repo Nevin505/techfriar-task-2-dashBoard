@@ -58,5 +58,44 @@ for(let listItem of listItems){
     listItem.style.backgroundColor = colors[item];
 
 }
-// listItems.forEach((indicator, index) => {
-// });
+
+// Set the count present inside the tabel
+document.getElementById('status-count-new').textContent=23;
+document.getElementById('status-count-requested').textContent=24;
+document.getElementById('status-count-actionsTaken').textContent=25;
+
+// To dynmaically Add Elements to the list
+const getTaskBody=()=>{
+    const taskbodyTable=document.getElementById('task-body');
+    console.log(taskbodyTable);
+     taskbodyTable.innerHTML+=`  <tr>
+                                        <td  class="  task-title">${taskTitle} </td>
+                                        <td >${taskCategory}</td>
+                                        <td>${taskDueDate}</td>
+                                        <td><button class="status-button pointer" >Request sent</button></td>
+                                    </tr>`
+    
+}
+
+
+const buttons=document.querySelectorAll('.task-filters>button');
+console.log(buttons);
+for(let button of buttons){
+    button.addEventListener('click',()=>{
+        for(let item of buttons){
+            item.classList.remove('selectedButton');
+        }
+        button.classList.add('selectedButton');
+    })
+}
+
+// .selectedButton::after{
+//     content: '';
+//     position: absolute;
+//     bottom:-60%;
+//     right: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 0.2rem;
+//     background-color: blue;
+// }
