@@ -67,10 +67,9 @@
     height: 2rem;
     /* border: orange 1px solid; */
     display: flex;
+    align-items: center;
     overflow-y: hidden;
-}
-.expand-more{
-    align-self: center;
+    width: 100%;
 }
 .drop-down-option{
     /* position: absolute; */
@@ -180,7 +179,7 @@
 
 /* Welcoming Message */
 .welcoming-quote{
-    border: 2px red solid;
+    /* border: 2px red solid; */
     flex: 1;
     & h2{
         font-size: 1.625rem;
@@ -213,7 +212,11 @@
     width: 100%;
 
 }
-
+.star{
+    position: absolute;
+    top: 25%;
+    right: 4%;
+}
 .document-status-container>h2{
     max-width: 10.125rem;
     margin-left: auto ;
@@ -358,7 +361,11 @@
     justify-content: space-between;
     gap: 0.4rem;
 }
-
+.mailbox-status{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
 .horizontal-line{
   border: 1px solid rgba(201, 206, 233, 1);
 }
@@ -384,7 +391,7 @@
     padding:0 2.5rem;
     padding-block:1.4rem 5.625rem;
     /* width: 45.25rem; */
-    border: blue 1px solid;
+    /* border: blue 1px solid; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -503,8 +510,23 @@ tr:not(:nth-of-type(1)){
   gap: 0.875rem;
 }
 
+#payment-table-body  td:nth-of-type(1){
+    font-weight: 600;
+    font-size: var(--font-size-14px);
+    color: rgba(30, 31, 33, 1);
+}
 
+#payment-table-body td:not(:nth-child(1))
+{ 
+    font-weight: 400;
+    font-size: var(--font-size-14px);
+    color: rgba(30, 31, 33, 1);
 
+}
+
+table{
+    font-family: 'Inter';
+}
 
 @media(max-width:750px){
     #layout{
@@ -577,9 +599,7 @@ tr:not(:nth-of-type(1)){
        
     }
     
-table{
-    font-family: 'Inter';
-}
+
 .task-container{
     padding: 0.625rem;
 }
@@ -647,47 +667,64 @@ tr{
         justify-content: space-between;
         position: relative;
        }
-       #payment-table-body td{
-        width: max-content;
+       
+       #payment-table-body tr{
+        gap: 0.6rem;
        }
+
        #payment-table-body td:nth-child(1){
             order: 1;
             font-size: 1rem;
             font-weight: 500;
-            width: 58%;
+            width: 68%;
        }
+/* to select the Price Element */
+       #payment-table-body td:nth-child(3){
+          font-size: 1rem;
+          font-weight: 600  ;
+          color:rgba(30, 31, 33, 1);
+          order: 2;
+          display: flex;
+          align-items: center;
+       }
+    
   
        /* to make the date appera jus below the transcation id */
        #payment-table-body td:nth-child(2){
          position: absolute;
-         top: 35%;
-         padding-block: 1.6rem;
+         top: 2.2rem;
+         padding-block: 1.5rem;
        }
-    
-       
-       #payment-table-body td:nth-child(3){
-        order: 2;
-        display: flex;
-        align-items: center;
-       }
-       #payment-table-body td:nth-child(3)::after{
+      
+
+       #payment-table-body .expand-more::after{
         content: url('./Icon/black-upArrow.svg');
-        width: 1rem;
-        height: 1rem;
+        width: 0.5rem;
         cursor: pointer;
+        padding-inline: 0.4rem;
+
        }
-    
+
+       #payment-table-body .expand-more::after[data-icon="up"]::after {
+        content:'nh'; /* Example of another content change */
+        transform: rotate(90deg);
+    }
+    #payment-table-body .expand-more::after[data-icon="down"]::after {
+        content: '►'; /* Example of another content change */
+    }
     
      #payment-table-body td:nth-child(4){
         order: 4;
         display: none;
         flex-direction: column;
         gap: 0.25rem;
-   
-
+        font-size: var(--font-size-14px);
+        font-weight: 600;
     }
     #payment-table-body td:nth-child(4)::before{
         content: 'Description';
+        font-weight: 400;
+        color: rgba(106, 106, 109, 1);
     }
 
 }

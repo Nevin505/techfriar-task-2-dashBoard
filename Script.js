@@ -94,18 +94,27 @@ for(let button of buttons){
 
 const expandMoreIconButtons=document.getElementsByClassName('expand-more');
 
+console.log(expandMoreIconButtons);
+
 
 for(let expandMoreIconButton of expandMoreIconButtons){
 
     expandMoreIconButton.addEventListener('click',()=>{
-        console.log(expandMoreIconButton.nextElementSibling);
+        // console.log(expandMoreIconButton.nextElementSibling);
+        console.log(expandMoreIconButtons);
+        
         const displayProperty= expandMoreIconButton.nextElementSibling.style.display
        if(displayProperty==='none') 
        {
            expandMoreIconButton.nextElementSibling.style.display='flex'
+        //    console.log(  expandMoreIconButton.querySelector('::after').textContent);
+           expandMoreIconButton.setAttribute('data-icon', 'up');
+           
        }
        else{
            expandMoreIconButton.nextElementSibling.style.display='none'
+           expandMoreIconButton.setAttribute('data-icon', 'down');
+
        }
     })
 }
