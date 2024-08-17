@@ -36,18 +36,14 @@
 /* Side NavBar Desigin */
 .side-navBar{
     display: none;
-    /* display: flex; */
-    /* display: flex; */
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
     flex: 1 1 18.3rem;
     /* flex-basis: 18.3rem; */
     /* max-width: 18.3rem; */
-    border: green 1px solid;
     background-color: var(--navbar-BackgrounColor);
     padding-inline: 1.1rem;
-    /* height: 100%; */
 }
 .nav-bar-container{
     display: flex;

@@ -50,7 +50,9 @@ const colors = ['#f39c6b', '#e74c3c', '#27ae60']; // Colors for each segment
 
 function createDoughnutChart(values, colors, gap = 2) {
     const total = values.reduce((acc, val) => acc + val, 0);
-    const AppicationNumber=document.getElementById('doughnut-chart-text').innerText=`${total} Applications`
+
+    // To show total number of applications Recicved Yet
+    document.getElementById('doughnut-chart-text').innerText=`${total} Applications`
     let cumulativePercent = 0;
     const gapPercent = gap / 360; // convert gap to percentage of the circle
 
