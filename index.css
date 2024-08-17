@@ -28,10 +28,16 @@
 .transparent{
     background-color: transparent;
 }
-
+#showMore{
+    background-color: var(--navbar-BackgrounColor);
+    width: 2.5rem;
+    padding: 1rem 0.5rem;
+}
 /* Side NavBar Desigin */
 .side-navBar{
-    display: flex;
+    display: none;
+    /* display: flex; */
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
@@ -170,6 +176,7 @@
     flex-direction: column;
     /* align-items: center; */
     justify-content: space-evenly;
+    /* height: 100%; */
     gap: 2rem;
     /* width: 26.43rem; */
     width: 100%;
@@ -212,6 +219,7 @@
     width: 100%;
 
 }
+/* To Position the decoration Star */
 .star{
     position: absolute;
     top: 25%;
@@ -532,9 +540,12 @@ table{
     #layout{
         flex-direction: column;
      }
-
+        #showMore{
+      display: none;
+        }
      /* Side NavBar Desigin */
     .side-navBar{
+    display: flex;
     width: 100%;
     flex: 1;
      }

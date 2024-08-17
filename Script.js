@@ -1,6 +1,50 @@
+
+const showMore = document.getElementById('showMore');
+
+const navBarHeading = document.querySelector('.navBar-heading');
+
+const navBarBrandButton = document.querySelector('.navBar-heading .menu-icon'); 
+
+const sideNavBar = document.querySelector('.side-navBar');
+
+//  event listener functions 
+function handleShowMoreClick() {
+    sideNavBar.style.display = 'flex';
+    showMore.style.display = 'none'; // Hide the showMore button
+}
+
+function handleNavBarBrandClick() {
+    sideNavBar.style.display = 'none'; 
+    showMore.style.display = 'block'; 
+}
+
+// Function to check screen size and remove event listeners if needed
+function checkScreenSize() {
+    if (window.innerWidth < 768) {
+        // Remove the event listeners when screen is smaller than 768px
+        showMore.removeEventListener('click', handleShowMoreClick);
+        navBarBrandButton.removeEventListener('click', handleNavBarBrandClick);
+        
+        //  set the appropriate display for smaller screens
+        showMore.style.display = 'none';
+        sideNavBar.style.display = 'flex'; // or whatever is appropriate for small screens
+    } else {
+        // Add the event listeners back if the screen size is above 768px
+        showMore.addEventListener('click', handleShowMoreClick);
+        navBarBrandButton.addEventListener('click', handleNavBarBrandClick);
+    }
+}
+
+// for Intial Run
+checkScreenSize();
+
+// Re-run the checkScreenSize function on window resize
+window.addEventListener('resize', checkScreenSize);
+
+
 // to change the text Dynamically
 const complainceNumber=document.getElementById('complainceNumber').textContent=4;
-const values = [12, 6   , 10]; // Your input values
+const values = [12, 6 , 10]; //  input values
 
 const colors = ['#f39c6b', '#e74c3c', '#27ae60']; // Colors for each segment
 
@@ -22,9 +66,7 @@ function createDoughnutChart(values, colors, gap = 2) {
 
     // Set the conic-gradient dynamically with gaps
     document.getElementById('doughnutChart').style.background = `conic-gradient(${gradientSegments})`;
-    
-    // Set the center text
-    // document.getElementById('chartValue').textContent = total;
+
 }
 
 
@@ -34,7 +76,6 @@ createDoughnutChart(values, colors, 3); // 2 degrees gap between each segment
 // Select Clickable Links
 
 const navLinkItems=document.getElementsByClassName('nav-link-items');
-
 
 // To Remove and add the background effect when a navLinks is being clicked
 for(let navLinkItem of navLinkItems){
@@ -51,11 +92,10 @@ for(let navLinkItem of navLinkItems){
 // application-status-content
 const listItems=document.getElementsByClassName('color-indicator');
 
-
 let item=0;
 for(let listItem of listItems){
-    item++;
     listItem.style.backgroundColor = colors[item];
+    item++;
 
 }
 
