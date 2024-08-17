@@ -44,12 +44,12 @@ window.addEventListener('resize', checkScreenSize);
 
 // to change the text Dynamically
 const complainceNumber=document.getElementById('complainceNumber').textContent=4;
-const Values = [{"incomplete":6,"pending" :6 ,"approved": 10}]; //  input values
+const Values = {"incomplete":6,"pending" :2 ,"approved": 10}; //  input values
 
 const colors = ['#f39c6b', '#e74c3c', '#27ae60']; // Colors for each segment
 
 function createDoughnutChart(Values, colors, gap = 2) {
-    const total = Object.values(Values[0]).reduce((acc, val) => acc + val, 0);
+    const total = Object.values(Values).reduce((acc, val) => acc + val, 0);
    console.log(total);
    
     // To show total number of applications Recicved Yet
@@ -57,7 +57,7 @@ function createDoughnutChart(Values, colors, gap = 2) {
     let cumulativePercent = 0;
     const gapPercent = gap / 360; // convert gap to percentage of the circle
 
-    const gradientSegments =  Object.values(Values[0]).map((value, index) => {
+    const gradientSegments =  Object.values(Values).map((value, index) => {
         const percent = value / total;
         const startPercent = cumulativePercent;
         cumulativePercent += percent;
